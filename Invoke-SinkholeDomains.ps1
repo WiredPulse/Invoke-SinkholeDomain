@@ -1,4 +1,3 @@
-﻿
 function Sink-Domain($domain){
     Add-DnsServerPrimaryZone -Name "0-Sinkhole_Domains" -ZoneFile "0-Sinkhole_Domains"
     Add-DnsServerPrimaryZone -Name "$domain" -ZoneFile "0-Sinkhole_Domains"
@@ -42,9 +41,6 @@ function Sink-Removal{
     }
 }
 
-} # Domains
-
-function Hosts{
 function Sinkhole-Hosts{
 param([string[]]$domains)
     #Requires -RunAsAdministrator
